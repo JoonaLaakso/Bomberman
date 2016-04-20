@@ -6,14 +6,17 @@ public class BombDetonate : MonoBehaviour {
     public int bombLength = 3;
     public float bombTimer = 3f;
     Vector2 bombInitPos;
+    GameObject bombCenterPrefab;
+    GameObject bombConnectorPrefab;
+    GameObject bombEndPrefab;
     //List<int> Directions;
-    List<int> Directions = new List<int>();
+    List<bool> Directions = new List<bool>();
 
     // Use this for initialization
     void Start () {
-        //Make a list for all 4 directions for the bomb explosion
+        //Make a bool list for all 4 directions for the bomb explosion
         for (int i = 0; i < 4; i++) {
-            Directions.Add(0);
+            Directions.Add(false);
             
 
         }
@@ -37,6 +40,8 @@ public class BombDetonate : MonoBehaviour {
         //if we hit a player, bomb sprite keeps going but we run the death script from the player. 
         //bomb center uses sprite #1, extensions use sprite #2 and where bomb ends we use sprite #3
 
+        bombInitPos = gameObject.transform.position;
+        Instantiate(bombCenterPrefab, bombInitPos, Quaternion.identity);
         /*#1 Init:
         create the center mass of the bomb, set up a loop. For the loop we need these variables:
         -initial location
@@ -58,7 +63,9 @@ public class BombDetonate : MonoBehaviour {
         if up:
         exploSpot = vector2(tempx, tempy + i)
 
-        if this spot is populated with a soft block, then we use sprite #3 and turn on flameEnd(left right etc whatever we need) = true
+        if this spot is populated with a soft block, then we use sprite #3 (rotate it!) and turn on flameEnd(left right etc whatever we need) = true
+
+        If not, we use sprite #2. Rotate it right!
         
 
         after this, either of these happen;
@@ -71,7 +78,7 @@ public class BombDetonate : MonoBehaviour {
         etc
         if we reach i = bomblength,
 
-        we instantiate a sprite #3 on current exploSpot, turn on flameEnd(left right up down etc whatever we need) = true
+        we instantiate a sprite #3 (Rotate it!) on current exploSpot, turn on flameEnd(left right up down etc whatever we need) = true
 
 
         */
