@@ -5735,7 +5735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   solidObjects: []
-  randomPercent: 78
+  randomPercent: 100
 --- !u!4 &1311354812
 Transform:
   m_ObjectHideFlags: 0

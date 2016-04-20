@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 449200}
   - 212: {fileID: 21281518}
   - 61: {fileID: 6195498}
+  - 114: {fileID: 11466744}
   m_Layer: 0
   m_Name: BombEnd_Right
   m_TagString: Untagged
@@ -43,6 +44,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+--- !u!114 &11466744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a0af2e02577ff4a8ae07b0d2137900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21281518
 SpriteRenderer:
   m_ObjectHideFlags: 1

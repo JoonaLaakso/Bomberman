@@ -85,6 +85,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombLength: 3
   bombTimer: 3
+  bombCenterPrefab: {fileID: 194182, guid: bdc9a3ca66faafd428dab8ea996273fd, type: 2}
+  bombConnectorPrefab: {fileID: 112912, guid: f38a5afcdeddfde438ddf2fdd9e12b9e, type: 2}
+  bombEndPrefab: {fileID: 192224, guid: a088b4fc69a0414499f500c1a849c062, type: 2}
 --- !u!212 &21275532
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -171,6 +174,18 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 8e3d3aee8d7556c4a9a8bca9d3e48c35,
         type: 3}
+    - target: {fileID: 0}
+      propertyPath: bombCenterPrefab
+      value: 
+      objectReference: {fileID: 194182, guid: bdc9a3ca66faafd428dab8ea996273fd, type: 2}
+    - target: {fileID: 0}
+      propertyPath: bombConnectorPrefab
+      value: 
+      objectReference: {fileID: 112912, guid: f38a5afcdeddfde438ddf2fdd9e12b9e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: bombEndPrefab
+      value: 
+      objectReference: {fileID: 192224, guid: a088b4fc69a0414499f500c1a849c062, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151820}
