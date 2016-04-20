@@ -76,6 +76,11 @@ public class BombDetonate : MonoBehaviour {
                 if (i == bombLength - 1) {
                     bombSprite = bombEndPrefab;
                 }
+                for (int k = 0; k < gmscript.solidObjects.Count; k++)
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                        Directions[n] = true;
+                        bombSprite = bombEndPrefab;
+                    }
                 Instantiate(bombSprite, exploSpot, Quaternion.Euler(0, 0, 90));
                 
                 
@@ -95,6 +100,11 @@ public class BombDetonate : MonoBehaviour {
                 if (i == bombLength - 1) {
                     bombSprite = bombEndPrefab;
                 }
+                for (int k = 0; k < gmscript.solidObjects.Count; k++)
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                        Directions[n] = true;
+                        bombSprite = bombEndPrefab;
+                    }
                 Instantiate(bombSprite, exploSpot, Quaternion.Euler(0, 0, 0));
 
             
@@ -114,6 +124,11 @@ public class BombDetonate : MonoBehaviour {
                 if (i == bombLength - 1) {
                     bombSprite = bombEndPrefab;
                 }
+                for (int k = 0; k < gmscript.solidObjects.Count; k++)
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                        Directions[n] = true;
+                        bombSprite = bombEndPrefab;
+                    }
                 Instantiate(bombSprite, exploSpot, Quaternion.Euler(0, 0, 270));
 
             
@@ -133,6 +148,11 @@ public class BombDetonate : MonoBehaviour {
                 if (i == bombLength - 1) {
                     bombSprite = bombEndPrefab;
                 }
+                for (int k = 0; k < gmscript.solidObjects.Count; k++)
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                        Directions[n] = true;
+                        bombSprite = bombEndPrefab;
+                    }
                 Instantiate(bombSprite, exploSpot, Quaternion.Euler(0, 0, 180));
 
             
