@@ -50,11 +50,30 @@ public class BombDetonate : MonoBehaviour {
         This can be easily done if we check the spot before making the prefab to the spot.
 
         if we want to go right for example on the 2nd loop, we do:
+        first check if flameEnd(direction) = false
+
         exploSpot =  vector2(tempx + i, tempy)
         if left:
         exploSpot = vector2(tempx - i, tempy)
         if up:
         exploSpot = vector2(tempx, tempy + i)
+
+        if this spot is populated with a soft block, then we use sprite #3 and turn on flameEnd(left right etc whatever we need) = true
+        
+
+        after this, either of these happen;
+        first check if flameEnd(direction) = false
+
+        ïf we reach a dead end;
+        -check next (hard) block with 
+        if we go right:
+        checkSpot = vector2(tempx + i, tempy)
+        etc
+        if we reach i = bomblength,
+
+        we instantiate a sprite #3 on current exploSpot, turn on flameEnd(left right up down etc whatever we need) = true
+
+
         */
 
 
