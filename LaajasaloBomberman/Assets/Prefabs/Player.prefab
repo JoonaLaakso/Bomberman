@@ -881,7 +881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d3b259dc611d547b4091436d9e0ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 4
+  playerSpeed: 2.5
   collisionChecker: {fileID: 0}
 --- !u!114 &11494672
 MonoBehaviour:

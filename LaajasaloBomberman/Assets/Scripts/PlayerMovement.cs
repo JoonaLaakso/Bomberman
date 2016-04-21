@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour {
         GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
         //if (gmscript.solidObjects.Count != 0) {
             for (int i = 0; i < gmscript.solidObjects.Count; i++)
-                if (gmscript.solidObjects[i] != null && Vector2.Distance(gmscript.solidObjects[i].transform.position, collisionChecker.transform.position) < 0.1f) {
+                if (gmscript.solidObjects[i] != null && Vector2.Distance(gmscript.solidObjects[i].transform.position, collisionChecker.transform.position) < 0.15f) {
                     willWeMove = false;
                 }
         //}
