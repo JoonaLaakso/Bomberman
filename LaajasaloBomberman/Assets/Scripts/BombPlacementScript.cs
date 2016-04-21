@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class BombPlacementScript : MonoBehaviour {
+public class BombPlacementScript : MonoBehaviour
+{
     public GameObject playerCharacter;
     public GameObject bombPrefab;
     GameObject GM;
@@ -13,8 +14,10 @@ public class BombPlacementScript : MonoBehaviour {
     public float tickTime;
     public int bombPower = 3;
     public bool putBomb;
+    public KeyCode placeBomb = KeyCode.RightControl;
 
-    void Start () {
+    void Start()
+    {
         bombCount = maxBombs;
         tickTime = bombCD;
         GM = GameObject.Find("GameManager");
@@ -22,27 +25,32 @@ public class BombPlacementScript : MonoBehaviour {
         //GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
     }
 
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space) && bombCount >= 1) {
+    void Update()
+    {
+        if (Input.GetKeyDown(placeBomb) && bombCount >= 1)
+        {
             putBomb = true;
 
             //GameObject GM = GameObject.Find("GameManager");
             GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
             //if (gmscript.solidObjects.Count != 0) {
-            
+
             bombSpawnPos = playerCharacter.transform.position;
             float tempX = Mathf.Round(bombSpawnPos.x);
             float tempY = Mathf.Round(bombSpawnPos.y);
             bombSpawnPos = new Vector2(tempX, tempY);
             for (int i = 0; i < gmscript.solidObjects.Count; i++)
-                if (gmscript.solidObjects[i] != null && Vector2.Distance(gmscript.solidObjects[i].transform.position, bombSpawnPos) < 0.01f) {
+                if (gmscript.solidObjects[i] != null && Vector2.Distance(gmscript.solidObjects[i].transform.position, bombSpawnPos) < 0.01f)
+                {
                     putBomb = false;
-                } 
-            else {
+                }
+                else
+                {
                     putBomb = true;
                 }
             //Instantiate(bombPrefab, new Vector2(tempX, tempY), Quaternion.identity);
-            if (putBomb == true) {
+            if (putBomb == true)
+            {
                 GameObject newBomb = Instantiate(bombPrefab, new Vector2(tempX, tempY), Quaternion.identity) as GameObject;
                 var script = newBomb.GetComponent<BombDetonate>();
                 script.bombLength = bombPower;
@@ -53,16 +61,19 @@ public class BombPlacementScript : MonoBehaviour {
 
 
         }
-        if (bombCount < maxBombs) {
+        if (bombCount < maxBombs)
+        {
             tickTime -= Time.deltaTime;
-            if (tickTime <= 0) {
-                while (tickTime <= 0) {
+            if (tickTime <= 0)
+            {
+                while (tickTime <= 0)
+                {
                     tickTime += bombCD;
                     bombCount++;
                 }
             }
 
         }
-	
-	}
+
+    }
 }

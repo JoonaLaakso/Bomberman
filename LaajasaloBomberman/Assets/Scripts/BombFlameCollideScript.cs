@@ -1,18 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BombFlameCollideScript : MonoBehaviour {
+public class BombFlameCollideScript : MonoBehaviour
+{
 
-    void OnTriggerEnter2D(Collider2D c) {
+    void OnTriggerEnter2D(Collider2D c)
+    {
 
 
-        if (c.name == "Player") {
+        if (c.name.Contains("PlayerCharacter"))
+        {
             c.GetComponent<PlayerExterminate>().DestroyThis();
         }
-        if (c.name.Contains("SoftBlock")) {
+        if (c.name.Contains("SoftBlock"))
+        {
             c.GetComponent<SoftBlockDestroyAndPowerUp>().DestroyThis();
         }
-        if (c.name.Contains("BombObject")) {
+        if (c.name.Contains("BombObject"))
+        {
             print("touched bomb");
             c.GetComponent<BombDetonate>().Explosion();
         }

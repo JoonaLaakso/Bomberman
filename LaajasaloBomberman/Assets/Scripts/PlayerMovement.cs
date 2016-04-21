@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour {
     bool willWeMove;
     Direction moveDir;
     GameObject GM;
+    public KeyCode Up = KeyCode.UpArrow;
+    public KeyCode Down = KeyCode.DownArrow;
+    public KeyCode Left = KeyCode.LeftArrow;
+    public KeyCode Right = KeyCode.RightArrow;
 
 
     Animator anim;
@@ -38,19 +42,19 @@ public class PlayerMovement : MonoBehaviour {
         //Here we detect which direction the player has pressed using getkey
         //TODO: Use Input.GetAxis instead of KeyCodes (enables multiplayer functionality)
         //TODO: Buffering
-        if (Input.GetKey(KeyCode.RightArrow)) {
+        if (Input.GetKey(Right)) {
             moveDir = Direction.Right;
 
         }
-        else if (Input.GetKey(KeyCode.LeftArrow)) {
+        else if (Input.GetKey(Left)) {
             moveDir = Direction.Left;
 
         }
-        else if (Input.GetKey(KeyCode.UpArrow)) {
+        else if (Input.GetKey(Up)) {
             moveDir = Direction.Up;
 
         }
-        else if (Input.GetKey(KeyCode.DownArrow)) {
+        else if (Input.GetKey(Down)) {
             moveDir = Direction.Down;
 
         }
@@ -71,7 +75,7 @@ public class PlayerMovement : MonoBehaviour {
         GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
         //if (gmscript.solidObjects.Count != 0) {
             for (int i = 0; i < gmscript.solidObjects.Count; i++)
-                if (gmscript.solidObjects[i] != null && Vector2.Distance(gmscript.solidObjects[i].transform.position, collisionChecker.transform.position) < 0.15f) {
+                if (gmscript.solidObjects[i] != null && Vector2.Distance(gmscript.solidObjects[i].transform.position, collisionChecker.transform.position) < 0.1f) {
                     willWeMove = false;
                 }
         //}

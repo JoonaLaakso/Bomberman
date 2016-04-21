@@ -6,7 +6,7 @@ public class BombFlameCenterCollider : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D c) {
 
         print("Collision");
-        if (c.name == "Player") {
+        if (c.name.Contains("PlayerCharacter")) {
             c.GetComponent<PlayerExterminate>().DestroyThis();
         }
         if (c.name.Contains("SoftBlock")) {
