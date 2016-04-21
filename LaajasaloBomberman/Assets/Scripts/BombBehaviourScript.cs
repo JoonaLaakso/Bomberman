@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class BombBehaviourScript : MonoBehaviour {
-    float timer = 1;
+    float timer = 0.5f;
 
 	// Use this for initialization
 	void Start () {
