@@ -24,10 +24,7 @@ public class BombDetonate : MonoBehaviour {
             
 
         }
-        //debug
-        print(Directions[0]);
-        print(Directions[2]);
-        print(Directions[3]);
+        
 	}
 	
 	// Update is called once per frame

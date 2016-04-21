@@ -1912,7 +1912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1001 &362493340
 Prefab:
   m_ObjectHideFlags: 0
@@ -5727,7 +5727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   solidObjects: []
-  randomPercent: 6
+  randomPercent: 100
 --- !u!4 &1311354812
 Transform:
   m_ObjectHideFlags: 0
@@ -6899,10 +6899,6 @@ Prefab:
     - target: {fileID: 151820, guid: a615120e61368c349b429db388c1871b, type: 2}
       propertyPath: m_Name
       value: HardBlock (51)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6134028, guid: a615120e61368c349b429db388c1871b, type: 2}
-      propertyPath: m_Size.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a615120e61368c349b429db388c1871b, type: 2}
