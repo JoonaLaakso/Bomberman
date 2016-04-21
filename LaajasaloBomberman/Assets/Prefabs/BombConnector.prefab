@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21273516}
   - 61: {fileID: 6123668}
   - 114: {fileID: 11450116}
-  - 114: {fileID: 11452136}
   - 50: {fileID: 5023616}
+  - 114: {fileID: 11444956}
   m_Layer: 0
   m_Name: BombConnector
   m_TagString: Untagged
@@ -63,6 +63,17 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
+--- !u!114 &11444956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8feba87cfb670424e8592d08321b015e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11450116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -72,17 +83,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2a0af2e02577ff4a8ae07b0d2137900, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11452136
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 112912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8feba87cfb670424e8592d08321b015e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21273516
@@ -110,7 +110,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300032, guid: f1465a3af9e33844cb8c0fc995722dc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,7 +124,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x

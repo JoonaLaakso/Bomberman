@@ -58,6 +58,7 @@ public class BombDetonate : MonoBehaviour {
         Instantiate(bombCenterPrefab, bombInitPos, Quaternion.identity);
         float tempX = Mathf.Round(bombInitPos.x);
         float tempY = Mathf.Round(bombInitPos.y);
+        GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
         for (int i = 0; i < bombLength; i++) {
 
             //TODO; Every other direction and check the up part
@@ -67,7 +68,6 @@ public class BombDetonate : MonoBehaviour {
                 bombSprite = bombConnectorPrefab;
                 exploSpot = new Vector2(tempX, tempY + i + 1);
                 Vector2 newExploSpot = new Vector2(tempX, tempY + i + 2);
-                GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
                     if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, exploSpot) < 0.1f) {
                         Directions[n] = true;
@@ -91,7 +91,6 @@ public class BombDetonate : MonoBehaviour {
                 bombSprite = bombConnectorPrefab;
                 exploSpot = new Vector2(tempX + i + 1, tempY);
                 Vector2 newExploSpot = new Vector2(tempX + i + 2, tempY);
-                GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
                     if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, exploSpot) < 0.1f) {
                         Directions[n] = true;
@@ -115,7 +114,6 @@ public class BombDetonate : MonoBehaviour {
                 bombSprite = bombConnectorPrefab;
                 exploSpot = new Vector2(tempX, tempY - i - 1);
                 Vector2 newExploSpot = new Vector2(tempX, tempY - i - 2);
-                GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
                     if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, exploSpot) < 0.1f) {
                         Directions[n] = true;
@@ -139,7 +137,6 @@ public class BombDetonate : MonoBehaviour {
                 bombSprite = bombConnectorPrefab;
                 exploSpot = new Vector2(tempX - i - 1, tempY);
                 Vector2 newExploSpot = new Vector2(tempX - i - 2, tempY);
-                GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
                     if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, exploSpot) < 0.1f) {
                         Directions[n] = true;

@@ -15,6 +15,7 @@ public class BombPlacementScript : MonoBehaviour {
 
     void Start () {
         maxBombs = bombCount;
+        tickTime = bombCD;
         GM = GameObject.Find("GameManager");
         print(GM);
         //GameManagerScript gmscript = GM.GetComponent<GameManagerScript>();

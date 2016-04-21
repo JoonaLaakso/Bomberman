@@ -24,10 +24,14 @@ public class PlayerMovement : MonoBehaviour {
     bool willWeMove;
     Direction moveDir;
     GameObject GM;
+
+
+    Animator anim;
     // Use this for initialization
     void Start () {
         playerPos = gameObject.transform.position;
         GM = GameObject.Find("GameManager");
+        anim = GetComponent<Animator>();
     }
 
     void Update () {
@@ -52,6 +56,7 @@ public class PlayerMovement : MonoBehaviour {
         }
         else {
             moveDir = Direction.None;
+            anim.SetInteger("state", 0);
 
         }
         
@@ -87,6 +92,7 @@ public class PlayerMovement : MonoBehaviour {
         //float tempCheckY = Mathf.Round(colCheckPos.y + 0.5f);
 
         if (moveDir == Direction.Right) {
+            anim.SetInteger("state", 3);
 
             //TEST: If collision stuff works
             colCheckPos = new Vector2(playerPos.x + 1f, playerPos.y);
@@ -120,6 +126,7 @@ public class PlayerMovement : MonoBehaviour {
             }
         }
         if (moveDir == Direction.Left) {
+            anim.SetInteger("state", 2);
             //anim.SetInteger("state", 5);
             //TEST: If collision stuff works
             colCheckPos = new Vector2(playerPos.x - 1f, playerPos.y);
@@ -152,6 +159,8 @@ public class PlayerMovement : MonoBehaviour {
             }
         }
         if (moveDir == Direction.Up) {
+
+            anim.SetInteger("state", 1);
             //anim.SetInteger("state", 1);
             //TEST: If collision stuff works
             colCheckPos = new Vector2(playerPos.x, playerPos.y + 1f);
@@ -183,6 +192,8 @@ public class PlayerMovement : MonoBehaviour {
             }
         }
         if (moveDir == Direction.Down) {
+
+            anim.SetInteger("state", 4);
             //anim.SetInteger("state", 3);
             //TEST: If collision stuff works
             colCheckPos = new Vector2(playerPos.x, playerPos.y - 1f);

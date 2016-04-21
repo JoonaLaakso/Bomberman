@@ -13,4 +13,5 @@ public class BombFlameCenterCollider : MonoBehaviour {
             c.GetComponent<SoftBlockDestroyAndPowerUp>().DestroyThis();
         }
     }
+
 }

@@ -12,5 +12,9 @@ public class BombFlameCollideScript : MonoBehaviour {
         if (c.name.Contains("SoftBlock")) {
             c.GetComponent<SoftBlockDestroyAndPowerUp>().DestroyThis();
         }
+        if (c.name.Contains("BombObject")) {
+            print("touched bomb");
+            c.GetComponent<BombDetonate>().Explosion();
+        }
     }
 }
