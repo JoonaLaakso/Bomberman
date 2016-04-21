@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BombDetonate : MonoBehaviour {
-    public int bombLength = 3;
+    public int bombLength = 2;
     public float bombTimer = 3f;
     Vector2 bombInitPos;
     Vector2 exploSpot;
@@ -37,7 +37,7 @@ public class BombDetonate : MonoBehaviour {
             Explosion();
             }
         }
-    void Explosion() {
+    public void Explosion() {
         //Koodia
         //here we have to make bomb explosion logic. Create a center bomb object, then loop all four direction for bomblength amount. 
         //If there is a solid object in front, then for that direction do not create new explosion sprites.
@@ -77,7 +77,7 @@ public class BombDetonate : MonoBehaviour {
                     bombSprite = bombEndPrefab;
                 }
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
-                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f && gmscript.solidObjects[k].name.Contains("HardBlock")) {
                         Directions[n] = true;
                         bombSprite = bombEndPrefab;
                     }
@@ -101,7 +101,7 @@ public class BombDetonate : MonoBehaviour {
                     bombSprite = bombEndPrefab;
                 }
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
-                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f && gmscript.solidObjects[k].name.Contains("HardBlock")) {
                         Directions[n] = true;
                         bombSprite = bombEndPrefab;
                     }
@@ -125,7 +125,7 @@ public class BombDetonate : MonoBehaviour {
                     bombSprite = bombEndPrefab;
                 }
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
-                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f && gmscript.solidObjects[k].name.Contains("HardBlock")) {
                         Directions[n] = true;
                         bombSprite = bombEndPrefab;
                     }
@@ -149,7 +149,7 @@ public class BombDetonate : MonoBehaviour {
                     bombSprite = bombEndPrefab;
                 }
                 for (int k = 0; k < gmscript.solidObjects.Count; k++)
-                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f) {
+                    if (gmscript.solidObjects[k] != null && Vector2.Distance(gmscript.solidObjects[k].transform.position, newExploSpot) < 0.1f && gmscript.solidObjects[k].name.Contains("HardBlock")) {
                         Directions[n] = true;
                         bombSprite = bombEndPrefab;
                     }

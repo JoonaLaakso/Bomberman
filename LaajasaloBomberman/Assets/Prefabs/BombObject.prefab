@@ -27,7 +27,7 @@ GameObject:
   - 61: {fileID: 6168018}
   - 114: {fileID: 11413330}
   m_Layer: 0
-  m_Name: Bomb
+  m_Name: BombObject
   m_TagString: Solid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
 --- !u!114 &11413330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,7 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b02053f7de11d43a58bdff0bffb708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombLength: 3
+  bombLength: 2
   bombTimer: 3
   bombCenterPrefab: {fileID: 194182, guid: bdc9a3ca66faafd428dab8ea996273fd, type: 2}
   bombConnectorPrefab: {fileID: 112912, guid: f38a5afcdeddfde438ddf2fdd9e12b9e, type: 2}
@@ -151,7 +151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Name
-      value: Bombsprite
+      value: BombObject
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
@@ -188,11 +188,19 @@ Prefab:
       objectReference: {fileID: 192224, guid: a088b4fc69a0414499f500c1a849c062, type: 2}
     - target: {fileID: 0}
       propertyPath: bombLength
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

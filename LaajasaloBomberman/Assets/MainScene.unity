@@ -2658,15 +2658,19 @@ Prefab:
       objectReference: {fileID: 1222979052}
     - target: {fileID: 6187042, guid: 1ef589ee662fb854ead90a573cbc08be, type: 2}
       propertyPath: m_Size.x
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6187042, guid: 1ef589ee662fb854ead90a573cbc08be, type: 2}
       propertyPath: m_Size.y
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 21295234, guid: 1ef589ee662fb854ead90a573cbc08be, type: 2}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6187042, guid: 1ef589ee662fb854ead90a573cbc08be, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ef589ee662fb854ead90a573cbc08be, type: 2}
@@ -5735,7 +5739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   solidObjects: []
-  randomPercent: 100
+  randomPercent: 6
 --- !u!4 &1311354812
 Transform:
   m_ObjectHideFlags: 0
@@ -6486,7 +6490,18 @@ MonoBehaviour:
   bombCount: 1
   bombCD: 1
   tickTime: 0
-  bombPower: 3
+  bombPower: 2
+--- !u!114 &1427660071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1427660069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eda80921d53a444eb7189e3d5b17f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1457437313 stripped
 Transform:
   m_PrefabParentObject: {fileID: 408384, guid: a615120e61368c349b429db388c1871b, type: 2}

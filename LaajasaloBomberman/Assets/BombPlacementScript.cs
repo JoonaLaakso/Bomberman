@@ -28,7 +28,11 @@ public class BombPlacementScript : MonoBehaviour {
             float tempX = Mathf.Round(bombSpawnPos.x);
             float tempY = Mathf.Round(bombSpawnPos.y);
             //Instantiate(bombPrefab, new Vector2(tempX, tempY), Quaternion.identity);
-            gmscript.solidObjects.Add((GameObject)Instantiate(bombPrefab, new Vector2(tempX, tempY), Quaternion.identity));
+            GameObject newBomb = Instantiate(bombPrefab, new Vector2(tempX, tempY), Quaternion.identity) as GameObject;
+            var script = newBomb.GetComponent<BombDetonate>();
+            script.bombLength = bombPower;
+            gmscript.solidObjects.Add(newBomb);
+            //gmscript.solidObjects.Add((GameObject)Instantiate(bombPrefab, new Vector2(tempX, tempY), Quaternion.identity));
             bombCount--;
 
 
