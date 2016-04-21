@@ -7,14 +7,14 @@ public class BombPlacementScript : MonoBehaviour {
     public GameObject bombPrefab;
     GameObject GM;
     private Vector2 bombSpawnPos;
-    public int maxBombs;
+    public int maxBombs = 1;
     public int bombCount = 1;
     public float bombCD = 1;
     public float tickTime;
     public int bombPower = 3;
 
     void Start () {
-        maxBombs = bombCount;
+        bombCount = maxBombs;
         tickTime = bombCD;
         GM = GameObject.Find("GameManager");
         print(GM);
